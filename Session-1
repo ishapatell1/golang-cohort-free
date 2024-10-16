@@ -1,0 +1,3 @@
+We discussed the basics of HTTP/TCP.
+Went over the need for a DNS.
+Understood the role of a server and the need for languages like GoLang to write a server that can listen to HTTP requests and respond as needed.
