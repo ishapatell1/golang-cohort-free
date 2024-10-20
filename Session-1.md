@@ -1,5 +1,7 @@
 # Session 1: Networking Basics -- TCP/IP and HTTP/s
 
+*Read time: 7 min*
+
 We cover the fundamentals of HTTP and TCP, understanding how HTTP defines the rules for communication between clients and servers, while TCP ensures reliable data transmission. Next up we discussed the DNS[^1], which translates human-readable domains to IP addresses of the requested service. Without DNS we would have to remember numerical ip addresses for each and every websites we would ever want to visit.
 
 Next, we explored Client-Server architecture and the importance of servers. Servers can be written in multiple languages like Javascript(using NodeJS), Java, Golang (which happens to be our choice of programming language for this cohort) and many more. Golang is a modern and easy to understand language using which developers can easily work with HTTP requests and respond to them properly.
@@ -35,7 +37,9 @@ The client accesses a resource located on a server, but the client doesn't know 
 
 A Recursive Resolver is typically hosted by your ISP. Big tech companies like Google and Cloudflare also offer their dns resolvers for us to use. It is called Recursive Resolver because it recursively queries multiple servers to resolve a domain. Don't worry, we'll discuss them all as we proceed.
 
-When a resolver receives a query for a domain, it looks up into its own cache first. If it doesn't finds the IP, it then queries a **Root Server**. **Lets just say, the resolver knows a guy, who knows a guy, who knows another guy!**
+When a resolver receives a query for a domain, it looks up into its own cache first. If it doesn't finds the IP, it then queries a **Root Server**.
+
+**Lets just say, the resolver knows a guy, who knows a guy, who knows another guy!**
 
 #### 1.2.2 Root server:
 
@@ -44,7 +48,7 @@ The Root server itself doesn't have any information on the IPs of any domain. In
 
 #### 1.2.3 TLD Server:
 
-When resolver queries the TLD, the TLD server also doesn't knows the IP of the domain. Instead the TLD holds information of the **Authoritative Name Server** which holds the information of the requested domain. The TLD server now directs the resolver to Authoritative Server of the required domain
+When resolver queries the TLD, the TLD server also doesn't knows the IP of the domain. Instead the TLD server holds information of the **Authoritative Name Server** which holds the information of the requested domain. The TLD server now directs the resolver to Authoritative Server of the required domain
 
 #### 1.2.4 Authoritative Name Server:
 
@@ -86,11 +90,11 @@ Protocols like TCP, and also HTTP, exchange data in packets. Ever wondered whats
 
 ### 2.2 HTTP/HTTPS
 
-To work with the web, TCP alone isn't enough because it doesn't have a lot of higher level functionality to make the web work properly. It lacks the ability to identify a "specific" resource, it lacks caching, it also lacks a way of storing some persistent data (like cookies) which are essential today. TCP is only concerned with delivering raw data, which makes it impossible for This is where HTTP(or HTTPS) comes into play.
+To work with the web, TCP alone isn't enough because it doesn't have a lot of higher level functionality to make the web work properly. It lacks the ability to identify a "specific" resource, it lacks caching, it also lacks a way of storing some persistent data (like cookies) which are essential today. TCP is only concerned with delivering raw data, which makes it impossible for the browsers to distinguish different parts of the response. This is where HTTP(or HTTPS) comes into play.
 
 #### 2.2.1 What is HTTP/HTTPS
 
-HTTP (HyperText Transfer Protol) is an **application level** protocol. If you remember, the language for sharing documents through the web was and is HTML, HyperText Markup Language. HTTP defines rules for how the data (HTML in our case, JS and CSS included in modern times) should be trasported. It provides us a Request/Response[^7] architecture.
+HTTP (HyperText Transfer Protol) is an **application level** protocol. If you remember, the language for sharing documents through the web was and is HTML, HyperText Markup Language. HTTP defines rules for how the data (HTML in our case, JS and CSS included in modern times) should be transported. It provides us a Request/Response[^7] architecture.
 
 HTTP offers multiple **methods** which specify the action required to be performed on a given resource. Commonly used methods are: **GET, POST, DELETE, PUT, PATCH, OPTIONS.**[^8]
 
