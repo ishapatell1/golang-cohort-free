@@ -8,7 +8,7 @@ All these sessions were non-recorded fully live sessions conducted by `Team Shik
 
 
 # Details
-- Go lang free cohort was started on `3rd October 2024` and ended on `still going on`.
+- Go lang free cohort was started on `3rd October 2024` and ended on `4th November 2024`.
 - We have a dedicated #go-lang discord channel for discussions.
 
 ## Schedule
